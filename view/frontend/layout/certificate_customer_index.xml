@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Softnoesis
+ * Copyright(C) 11/2023 Softnoesis <ideveloper1990@gmail.com>
+ * @package Softnoesis_CustomerInfo
+ * @copyright Copyright(C) 2015 Softnoesis (ideveloper1990@gmail.com)
+ * @author Softnoesis <ideveloper1990@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Upload Document</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="custom_tab" template="Softnoesis_CustomerInfo::certificate.phtml" ifconfig="troosubcustomeraccount/general/enabled" />
+        </referenceContainer>
+    </body>
+</page>

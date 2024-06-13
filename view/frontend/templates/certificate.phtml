@@ -1,0 +1,44 @@
+ <div class="block block-dashboard-info">
+    <div class="block-title"><strong><?php echo __('Upload Document'); ?></strong></div>
+    <div class="block-content">
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?php echo __('Upload Document'); ?></span>
+            </strong>
+            <div class="box-content">                
+                <?php
+                    $blockObj= $block->getLayout()->createBlock('Softnoesis\CustomerInfo\Block\Customer\Account');
+                    $customer =  $blockObj->getCurrentCustomer();
+                if ($blockObj->getProfileExist()) {
+                    $pdfpath = $blockObj->getLogoUrl();
+                    $extension = pathinfo($pdfpath, PATHINFO_EXTENSION);
+                    if ($extension == 'jpg' || $extension == 'png') { ?>
+                            <a href="<?php echo $pdfpath;?>" download title="Upload Document">
+                                <img src="<?php echo $pdfpath; ?>" alt="Upload Document" style="width: 150px; height: 150px;">
+                            </a>
+                        <?php } else { ?>
+                            <a href="<?php echo $pdfpath;?>" download title="Download Document">
+                                <img src="<?php echo $block->getViewFileUrl('Softnoesis_CustomerInfo::images/pdf-icon.png'); ?>" alt="Download Document" style="width: 150px; height: 150px;">
+                            </a>
+                        <?php }
+                        ?>
+                    <?php }
+                ?>                
+            </div>
+        </div>
+        <div class="box box-newsletter">
+            <strong class="box-title">
+                <span><?php echo __('Upload New Document'); ?></span>
+            </strong>
+            <div class="box-content">
+                <form action="<?php echo $block->getUrl('routesname/customer/save/'); ?>" enctype="multipart/form-data" method="POST">
+                    <input type="file" name="customer_avatar" id="customer_avatar">
+                    <input type="hidden" name="customer_id" value="<?php echo $customer->getEntityId();?>">
+                    <input type="hidden" name="first_name" value="<?php echo $customer->getFirstname();?>">
+                    <input type="hidden" name="last_name" value="<?php echo $customer->getLastname();?>">
+                    <button type="submit"><span><?php echo __('Upload'); ?></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
