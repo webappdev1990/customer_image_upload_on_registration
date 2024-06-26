@@ -21,15 +21,15 @@
 <p>✅ Go to Magento 2 Admin > Login > Stores > Configuration > Softnoesis > Upload
 Document</p>
 <p><img align="right" src="https://commercemarketplace.adobe.com/media/catalog/product/1/4/142e_image02.png" style="max-width: 100%;"/></p>
-
+<p>&nbsp;</p>
 <p>✅ Go to Magento 2 Admin > Login > Customers > All Customers > Edit Customers</p>
 <p><img align="right" src="https://commercemarketplace.adobe.com/media/catalog/product/c/5/c573_image4.png" style="max-width: 100%;"/></p>
-
+<p>&nbsp;</p>
 <h2>Store Front View</h2>
 
 <p>✅ Customer Registration Form</p>
 <p><img align="right" src="https://commercemarketplace.adobe.com/media/catalog/product/b/4/b434_image1.png" style="max-width: 100%;"></p>
-
+<p>&nbsp;</p>
 <p>✅ My Account</p>
 <p><img align="right" src="https://commercemarketplace.adobe.com/media/catalog/product/5/3/5350_image2.png" style="max-width: 100%;"></p>
 </article>
